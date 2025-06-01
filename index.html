@@ -102,6 +102,7 @@
           u.voice = voices.find(v => v.lang === 'zh-TW') || voices[0];
         }
         u.rate = 0.5;
+        u.pitch = 2;
         
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(u);
