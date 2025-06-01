@@ -105,7 +105,7 @@
         );
         if (!preferredVoice && zhVoices.length > 0) {
           // 如果找不到偏好語音，選擇 zh-TW 語音中的第一個
-          preferredVoice = zhVoices[0];
+          preferredVoice = zhVoices[zhVoices.length - 1];
         }
     
         if (preferredVoice) {
