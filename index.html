@@ -98,6 +98,9 @@
         const voices = window.speechSynthesis.getVoices();
         const u = new SpeechSynthesisUtterance(text);
         u.lang = 'zh-TW';
+        if (voices.length > 0) {
+          u.voice = voices.find(v => v.lang === 'zh-TW') || voices[0];
+        }
         
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(u);
