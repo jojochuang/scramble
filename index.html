@@ -101,6 +101,7 @@
         if (voices.length > 0) {
           u.voice = voices.find(v => v.lang === 'zh-TW') || voices[0];
         }
+        u.rate = 0.5;
         
         window.speechSynthesis.cancel();
         window.speechSynthesis.speak(u);
